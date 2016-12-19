@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Todo App</title>
+
+    <!--          Jquery 3.1.1       -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--         angular 1.5.9       -->
+    <script src="node_modules/angular/angular.js"></script>
+    <!--           bootstrap         -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+    <!--            app.module.js           -->
+    <script src="app.module.js"></script>
+    <script src="component-phoneList/phone-list.module.js"></script>
+    <script src="component-phoneList/phone-list.component.js"></script>
+
+
+</head>
+<body ng-app="phonecatApp">
+
+<div class="container">
+    <div class="jumbotron">
+        <phone-list></phone-list>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>

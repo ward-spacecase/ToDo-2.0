@@ -1,0 +1,23 @@
+{
+  "name": "todo-angular",
+  "version": "1.0.0",
+  "description": "todo angular app",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "unknown"
+  },
+  "keywords": [
+    "to",
+    "do",
+    "todo",
+    "app",
+    "angular",
+    "1.5"
+  ],
+  "author": "Andrew Ward",
+  "license": "ISC"
+}

@@ -1,0 +1,18 @@
+#name {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    background-color: #888;
+    color: #fff;
+}
+welcome{
+    text-align: right;
+}
+*:focus{outline:0;}
+
+span.alert-2 {
+    padding: 5px;
+    font-size: 10px;
+    background-color: rgba(255, 10, 10, 0.7);
+
+}

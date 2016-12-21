@@ -1,0 +1,23 @@
+
+<div class="jumbotron" ng-controller="WelcomeController as vm">
+    <div class="row" >
+        <div class="col-md-8">
+            <!--Sidebar content-->
+            <h1>Welcome, </h1><hr>
+
+
+        </div>
+        <div class="col-md-2">
+           <h1><span id="name">{{vm.name}}</span></h1>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Type a nickname to get started</h3>
+            <input ng-model="vm.name" type="text" ng-class="bg-danger" maxlength="10">
+            <button class="btn btn-success" ng-click="vm.justDoIt()">Let's Do This</button>
+        </div>
+    </div>
+
+</div>

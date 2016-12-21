@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
     <!--            app.module.js           -->
     <script src="js/app.module.js"></script>
+
     <script src="js/components/welcome/welcome.module.js"></script>
     <script src="js/components/welcome/welcome.component.js"></script>
 
@@ -26,12 +27,16 @@
 </head>
 <body ng-app="todoApp">
 
-<div class="container">
 
-        <welcome></welcome>
+    <div class="container">
+           <welcome></welcome>
+    </div>
+
+
+
+<div ng-controller="MainStorage as vm">
+<button class="btn btn-primary" style="position: absolute; bottom: 0;" ng-click="vm.clearStorage()">Clear Local Storage</button>
 </div>
-
-
 
 
 </body>

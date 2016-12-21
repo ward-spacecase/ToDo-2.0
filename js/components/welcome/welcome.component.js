@@ -7,8 +7,8 @@
     }
 
 angular.
-module('welcome').
-component('welcome', {
+module('welcome')
+    .component('welcome', {
     templateUrl: templateURL,
 }).controller('WelcomeController', function(){
     var vm = this;
@@ -23,6 +23,7 @@ component('welcome', {
         localStorage.name = vm.name;
 
     };
+
 
 });
 })();

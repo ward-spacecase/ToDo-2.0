@@ -3,12 +3,15 @@
             angular.module('todoApp', [
                 'welcome', 'storage'
             ]);
-            angular.module('storage', [])
-                .controller('MainStorage', function($scope, localStorageService) {
 
-                    function submit(key, val) {
-                        localStorage.setItem(key, val);
-                        return localStorage[key];
+
+
+            angular.module('storage', [])
+                .controller('MainStorage', function() {
+                    var vm = this;
+                    vm.clearStorage = function () {
+                        localStorage.clear();
+                        console.log('clearing storage...');
                     }
                 });
 })();

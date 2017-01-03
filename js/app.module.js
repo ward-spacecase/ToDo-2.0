@@ -1,7 +1,7 @@
 (function() {
 
             angular.module('todoApp', [
-                'welcome', 'storage'
+                'welcome', 'storage', 'dashboard'
             ]);
 
 

@@ -2,27 +2,39 @@
 
     var templateURL = 'js/components/welcome/welcome.template.html';
 
-    if(localStorage.name != undefined) {
-        templateURL = 'js/components/welcome/welcome-existing-user.template.html';
-    }
 
 angular.
 module('welcome')
     .component('welcome', {
-    templateUrl: templateURL,
+    templateUrl: templateURL
 }).controller('WelcomeController', function(){
     var vm = this;
-
+    vm.userIsNew = true;
     vm.name = 'guest';
 
-    if(localStorage.name != undefined) {
-        vm.name = localStorage.name;
+    if(JSON.parse(localStorage.store) != undefined) {
+
+        vm.name = JSON.parse(localStorage.store).name;
+        vm.userIsNew = false;
     }
     vm.justDoIt = function () {
 
-        localStorage.name = vm.name;
+        var store = {
+            name: vm.name,
+            lists: {
+                listCount: 0,
+                lists: []
+            }
+        };
+        localStorage.store = JSON.stringify(store);
+        vm.toDashboard();
 
     };
+    vm.toDashboard = function () {
+
+        $('.container').html('');
+        $('.container').html('<dashboard></dashboard>');
+    }
 
 
 });

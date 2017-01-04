@@ -17,7 +17,7 @@
                 <div class="col-md-12">
                     <h3>Type a nickname to get started</h3>
                     <input ng-model="vm.name" type="text" ng-class="bg-danger" maxlength="10">
-                    <button class="btn btn-success" ng-click="vm.justDoIt()">Let's Do This</button>
+                    <a ui-sref="dashboard"> <button class="btn btn-success" ng-click="vm.justDoIt()">Let's Do This</button></a>
                 </div>
             </div>
 
@@ -37,7 +37,7 @@
             <div class="col-md-2">
             </div> <div class="col-md-8"></div>
             <div class="col-md-2">
-                <button class="btn btn-success" ng-click="vm.toDashboard()">Let's Do This</button>
+                <a ui-sref="dashboard"><button class="btn btn-success" ng-click="vm.toDashboard()">Let's Do This</button></a>
             </div>
         </div>
         </div>

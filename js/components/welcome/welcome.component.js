@@ -12,7 +12,7 @@ module('welcome')
     vm.userIsNew = true;
     vm.name = 'guest';
 
-    if(JSON.parse(localStorage.store) != undefined) {
+    if(localStorage.store != undefined) {
 
         vm.name = JSON.parse(localStorage.store).name;
         vm.userIsNew = false;
@@ -32,8 +32,7 @@ module('welcome')
     };
     vm.toDashboard = function () {
 
-        $('.container').html('');
-        $('.container').html('<dashboard></dashboard>');
+
     }
 
 

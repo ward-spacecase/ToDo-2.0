@@ -7,6 +7,9 @@
         .controller('DashController', function() {
             var vm = this;
 
+            vm.addList = function() {
+
+            }
 
 
         });

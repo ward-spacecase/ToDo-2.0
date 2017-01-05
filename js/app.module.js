@@ -1,3 +1,6 @@
+
+//for closure
+
 (function() {
 
             angular.module('todoApp', [
@@ -14,28 +17,32 @@
                         console.log('clearing storage...');
                     }
                 });
-})();
-
-        //ui-router module
-
-angular.module('routerApp', ['ui.router'])
-
-.config(function($stateProvider, $urlRouterProvider) {
-
-    $urlRouterProvider.otherwise('/home');
-
-    $stateProvider
 
 
-        .state('home', {
-            url: '/home',
-            templateUrl: 'js/components/welcome/welcome.template.html'
-        })
+    //ui-router module
 
-        .state('dashboard', {
-            url: '/dashboard',
-            templateUrl: 'js/components/dashboard/dashboard.template.html',
-            controller: 'DashController'
+    angular.module('routerApp', ['ui.router'])
+
+        .config(function($stateProvider, $urlRouterProvider) {
+
+            $urlRouterProvider.otherwise('/home');
+
+            $stateProvider
+
+
+                .state('home', {
+                    url: '/home',
+                    templateUrl: 'js/components/welcome/welcome.template.html'
+                })
+
+                .state('dashboard', {
+                    url: '/dashboard',
+                    templateUrl: 'js/components/dashboard/dashboard.template.html',
+                    controller: 'DashController'
+                });
+
         });
 
-});
+    //closure end
+})();
+

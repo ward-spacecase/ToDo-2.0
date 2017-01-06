@@ -16,9 +16,11 @@
 
                var title = prompt('Name your New List: ', 'list' + (vm.store.listTitles.length + 1));
 
-                vm.store.listTitles.push(title);
+                if(title != null) {
+                    vm.store.listTitles.push(title);
 
-                localStorage.store = JSON.stringify(vm.store);
+                    localStorage.store = JSON.stringify(vm.store);
+                }
 
             };
 

@@ -5,8 +5,10 @@
 
 angular.
 module('welcome')
+
     .component('welcome', {
     templateUrl: templateURL
+
 }).controller('WelcomeController', function(){
     var vm = this;
     vm.userIsNew = true;
@@ -24,16 +26,14 @@ module('welcome')
             lists: {
                 listCount: 0,
                 lists: []
-            }
+            },
+            listTitles: []
         };
         localStorage.store = JSON.stringify(store);
-        vm.toDashboard();
+
 
     };
-    vm.toDashboard = function () {
 
-
-    }
 
 
 });

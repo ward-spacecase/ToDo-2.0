@@ -44,3 +44,11 @@ span.alert-2 {
     font-weight: bold;
     color: green;
 }
+
+#add-todo {
+  opacity: 0.4;
+ }
+
+#add-todo-column-fix {
+    margin-top: 20px;
+}

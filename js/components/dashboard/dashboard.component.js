@@ -18,6 +18,14 @@
 
                 if(title != null) {
                     vm.store.listTitles.push(title);
+                    vm.store.lists.listArr.push({
+                        'title': title,
+                        'listLength': 0,
+                        'itemsInList': []
+                    });
+                    vm.store.lists.listCount++;
+                    console.log(vm.store);
+
 
                     localStorage.store = JSON.stringify(vm.store);
                 }

@@ -25,7 +25,7 @@ module('welcome')
             name: vm.name,
             lists: {
                 listCount: 0,
-                lists: []
+                listArr: []
             },
             listTitles: []
         };

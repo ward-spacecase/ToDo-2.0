@@ -27,6 +27,9 @@
     <!--            dashboard.js            -->
     <script src="js/components/dashboard/dashboard.module.js"></script>
     <script src="js/components/dashboard/dashboard.component.js"></script>
+    <!--            list.js                 -->
+    <script src="js/components/lists/list.module.js"></script>
+    <script src="js/components/lists/list.component.js"></script>
 
 </head>
 <body ng-app="todoApp">
@@ -39,7 +42,7 @@
 
 
 <div ng-controller="MainStorage as vm">
-<button class="btn btn-primary" style="position: absolute; bottom: 0;" ng-click="vm.clearStorage()">Clear Local Storage</button>
+<button class="btn btn-primary" ui-sref="home" style="position: absolute; bottom: 0;" ng-click="vm.clearStorage()">Clear Local Storage</button>
 </div>
 
 

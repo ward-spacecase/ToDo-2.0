@@ -4,7 +4,7 @@
 (function() {
 
             angular.module('todoApp', [
-                'welcome', 'storage', 'dashboard', 'routerApp', ''
+                'welcome', 'storage', 'dashboard', 'routerApp', 'list'
             ]);
 
             //storage module
@@ -39,6 +39,11 @@
                     url: '/dashboard',
                     templateUrl: 'js/components/dashboard/dashboard.template.html',
                     controller: 'DashController'
+                })
+                .state('list', {
+                    url: '/list',
+                    templateUrl: 'js/components/lists/list.template.html',
+                    controller: 'ListController'
                 });
 
         });

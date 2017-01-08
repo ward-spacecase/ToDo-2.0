@@ -17,9 +17,10 @@
 
                 <span ng-repeat="listTitle in vm.store.listTitles">
                     <div class="col-md-3">
-                        <div class="todo" ng-click="vm.openList(listTitle)">
+                        <a ui-sref="list"><div class="todo" ng-click="vm.openList(listTitle)">
                             <h3>{{listTitle}}</h3>
                         </div>
+                            </a>
                     </div>
                 </span>
                 <span>

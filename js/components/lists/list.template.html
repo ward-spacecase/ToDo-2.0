@@ -1,0 +1,11 @@
+<div class="jumbotron" ng-controller="ListController as vm">
+    <h1>{{vm.currentListTitle}}</h1>
+
+    <span ng-repeat="listItem in vm.list.itemsInList">
+            <h2>{{listItem.value}}</h2>
+    </span>
+
+    <div id="add-list-item" ng-click="vm.addListItem()">
+        <i class="fa fa-plus fa-3x"></i>
+    </div>
+</div>

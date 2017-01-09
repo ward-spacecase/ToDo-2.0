@@ -25,7 +25,7 @@
                         'itemsInList': []
                     });
                     vm.store.lists.listCount++;
-                    console.log(vm.store);
+
 
 
                     localStorage.store = JSON.stringify(vm.store);
@@ -35,7 +35,6 @@
 
             vm.openList = function(listTitle) {
                 activeList.setCurrentListTitle(listTitle);
-                console.log(activeList.getCurrentListTitle());
 
             };
 

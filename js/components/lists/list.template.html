@@ -2,10 +2,20 @@
     <h1>{{vm.currentListTitle}}</h1>
 
     <span ng-repeat="listItem in vm.list.itemsInList">
-            <h2>{{listItem.value}}</h2>
+
+            <h2  class="add-list-item"  ng-class="{strike: listItem.completed}">
+                <span class="check-x" ng-click="vm.toggleCompleted(listItem)">
+                    <i class="fa fa-check"></i>
+                </span>
+                {{listItem.item}}
+                <span class="exit-x" ng-click="vm.deleteItem(listItem)">
+                    <i class="fa fa-close"></i>
+                </span>
+            </h2>
     </span>
 
-    <div id="add-list-item" ng-click="vm.addListItem()">
+    <div id="add-list-item" class="add-list-item margin-bottom" ng-click="vm.addListItem()">
         <i class="fa fa-plus fa-3x"></i>
     </div>
+    <a ui-sref="dashboard"><i class="fa fa-arrow-left fa-2x"></i></a>
 </div>

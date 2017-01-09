@@ -22,7 +22,7 @@ span.alert-2 {
     border: 1px solid #ccc;
 }
 
-.todo, #add-list-item {
+.todo, .add-list-item {
 
     text-align: center;
     background-color: #ddd;
@@ -38,7 +38,7 @@ span.alert-2 {
     top: calc(50% - 35px);
 }
 
-.todo:hover, #add-list-item:hover {
+.todo:hover, .add-list-item:hover {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
@@ -48,10 +48,36 @@ span.alert-2 {
     color: green;
 }
 
-#add-todo {
+#add-todo, #add-list-item {
   opacity: 0.4;
  }
 
 #add-todo-column-fix {
     margin-top: 20px;
+}
+
+.check-x {
+    float: left;
+    color: darkgreen;
+}
+.check-x:hover {
+    color: limegreen;
+}
+.exit-x {
+    float: right;
+    color: darkred;
+}
+.exit-x:hover {
+    color: red;
+}
+.add-list-item {
+    min-height: 40px;
+}
+.strike {
+    opacity: 0.4;
+    text-decoration: line-through;
+}
+
+.margin-bottom {
+    margin-bottom: 50px;
 }

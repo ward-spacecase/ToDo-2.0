@@ -44,6 +44,10 @@
                     url: '/list',
                     templateUrl: 'js/components/lists/list.template.html',
                     controller: 'ListController'
+                })
+                .state('info', {
+                    url: '/info',
+                    templateUrl: 'js/components/info/info.template.html'
                 });
 
         });

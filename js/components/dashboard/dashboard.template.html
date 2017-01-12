@@ -18,7 +18,7 @@
                 <span ng-repeat="listTitle in vm.store.listTitles">
                     <div class="col-md-3">
                         <a ui-sref="list"><div class="todo" ng-click="vm.openList(listTitle)">
-                            <h3>{{listTitle}}</h3>
+                            <h3>{{listTitle | capitalize}}</h3>
                         </div>
                             </a>
                     </div>

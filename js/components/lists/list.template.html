@@ -7,7 +7,7 @@
                 <span class="check-x" ng-click="vm.toggleCompleted(listItem)">
                     <i class="fa fa-check"></i>
                 </span>
-                {{listItem.item}}
+                {{listItem.item | capitalize}}
                 <span class="exit-x" ng-click="vm.deleteItem(listItem)">
                     <i class="fa fa-close"></i>
                 </span>

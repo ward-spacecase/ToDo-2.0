@@ -3,10 +3,12 @@
     angular.module('list')
 
         .component('list', {
-            templateUrl: 'js/components/lists/list.template.html'
-        })
+            templateUrl: 'js/components/lists/list.template.html',
+            controller: ListController,
+            controllerAs: 'vm'
+        });
 
-        .controller('ListController', function(activeList) {
+        function ListController(activeList) {
 
             var vm = this;
 
@@ -68,6 +70,6 @@
                 localStorage.store = JSON.stringify(vm.store);
             };
 
-        });
+        };
 
 })();

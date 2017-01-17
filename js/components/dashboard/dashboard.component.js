@@ -2,44 +2,10 @@
     angular
         .module('dashboard')
             .component('dashboard', {
-                templateUrl: 'js/components/dashboard/dashboard.template.html'
+                templateUrl: 'js/components/dashboard/dashboard.template.html',
+                controller: DashController,
+                controllerAs: 'vm'
             })
-        .controller('DashController', function(activeList) {
-            var vm = this;
-
-            vm.store = JSON.parse(localStorage.store);
-            vm.title = '';
-
-
-
-
-            vm.addList = function() {
-
-               vm.title = prompt('Name your New List: ', 'list' + (vm.store.listTitles.length + 1));
-
-                if(vm.title != null) {
-                    vm.store.listTitles.push(vm.title);
-                    vm.store.lists.listArr.push({
-                        'title': vm.title,
-                        'listLength': 0,
-                        'itemsInList': []
-                    });
-                    vm.store.lists.listCount++;
-
-
-
-                    localStorage.store = JSON.stringify(vm.store);
-                }
-
-            };
-
-            vm.openList = function(listTitle) {
-                activeList.setCurrentListTitle(listTitle);
-
-            };
-
-
-        })
 
         .service('activeList', function() {         //services in seperate file
             var currentList = '';
@@ -53,5 +19,38 @@
                 }
             }
         });
+
+
+    function DashController(activeList) {
+        var vm = this;
+
+        vm.store = JSON.parse(localStorage.store);
+        vm.title = '';
+
+
+        vm.addList = function () {
+
+            vm.title = prompt('Name your New List: ', 'list' + (vm.store.listTitles.length + 1));
+
+            if (vm.title != null) {
+                vm.store.listTitles.push(vm.title);
+                vm.store.lists.listArr.push({
+                    'title': vm.title,
+                    'listLength': 0,
+                    'itemsInList': []
+                });
+                vm.store.lists.listCount++;
+
+
+                localStorage.store = JSON.stringify(vm.store);
+            }
+
+        };
+
+        vm.openList = function (listTitle) {
+            activeList.setCurrentListTitle(listTitle);
+
+        };
+    }
 
 })();

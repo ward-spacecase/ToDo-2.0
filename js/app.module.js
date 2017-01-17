@@ -12,6 +12,7 @@
             angular.module('storage', [])
                 .controller('MainStorage', function() {
                     var vm = this;
+
                     vm.clearStorage = function () {
                         localStorage.clear();
                         console.log('clearing storage...');
@@ -40,24 +41,21 @@
 
                 .state('home', {
                     url: '/home',
-                    templateUrl: 'js/components/welcome/welcome.template.html'
+                    template:'<welcome></welcome>'
                 })
 
                 .state('dashboard', {
                     url: '/dashboard',
-                    templateUrl: 'js/components/dashboard/dashboard.template.html',
-                    controller: 'DashController'
+                    template:'<dashboard></dashboard>'
                 })
                 .state('list', {
                     url: '/list',
-                    templateUrl: 'js/components/lists/list.template.html',
-                    controller: 'ListController'
+                    template:'<list></list>'
                 })
                 .state('info', {
                     url: '/info',
                     templateUrl: 'js/components/info/info.template.html'
                 });
-
         });
 
     //closure end

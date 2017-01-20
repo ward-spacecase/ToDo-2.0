@@ -81,3 +81,21 @@ span.alert-2 {
 .margin-bottom {
     margin-bottom: 50px;
 }
+
+
+/*anmations*/
+.zipper.ng-animate {
+    transition:0.5s linear all;
+}
+.zipper.ng-enter {
+    opacity:0;
+}
+.zipper.ng-enter.ng-enter-active {
+    opacity:1;
+}
+.zipper.ng-leave {
+    opacity:1;
+}
+.zipper.ng-leave.ng-leave-active {
+    opacity:0;
+}

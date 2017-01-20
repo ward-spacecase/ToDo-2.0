@@ -4,7 +4,7 @@
 (function() {
 
             angular.module('todoApp', [
-                'welcome', 'storage', 'dashboard', 'routerApp', 'list'
+                'welcome', 'storage', 'dashboard', 'routerApp', 'list', 'ngAnimate', 'ui.bootstrap'
             ]);
 
             //storage module

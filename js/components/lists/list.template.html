@@ -1,7 +1,7 @@
 <div class="jumbotron" >
     <h1>{{vm.currentListTitle}}</h1>
 
-    <span ng-repeat="listItem in vm.list.itemsInList">
+    <span ng-repeat="listItem in vm.list.itemsInList" class="zipper">
 
             <h2  class="add-list-item"  ng-class="{strike: listItem.completed}">
                 <span class="check-x" ng-click="vm.toggleCompleted(listItem)">
@@ -18,4 +18,5 @@
         <i class="fa fa-plus fa-3x"></i>
     </div>
     <a ui-sref="dashboard"><i class="fa fa-arrow-left fa-2x"></i></a>
+    <button class="btn btn-warning">Clear Completed</button>
 </div>

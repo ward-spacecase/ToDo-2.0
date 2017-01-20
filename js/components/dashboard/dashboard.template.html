@@ -15,7 +15,7 @@
             <h1>Todo Lists</h1>
             <div class="row">
 
-                <span ng-repeat="listTitle in vm.store.listTitles">
+                <span ng-repeat="listTitle in vm.store.listTitles" class="zipper">
                     <div class="col-md-3">
                         <a ui-sref="list"><div class="todo" ng-click="vm.openList(listTitle)">
                             <h3>{{listTitle | capitalize}}</h3>
@@ -23,9 +23,13 @@
                             </a>
                     </div>
                 </span>
-                <span>
+                <span class="zipper">
                         <div class="col-md-3" id="add-todo-column-fix">
-                            <div class="todo" id="add-todo" ng-click="vm.addList()">
+                            <div class="todo"
+                                 id="add-todo"
+                                 uib-popover-template="vm.popUpUrl"
+                                 popover-title="List Title: ">
+
                                 <i class="fa fa-plus fa-5x"></i>
                             </div>
                         </div>

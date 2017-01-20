@@ -27,6 +27,7 @@
         vm.store = JSON.parse(localStorage.store);
         vm.title = '';
 
+        vm.popUpUrl = 'js/components/info/popoverTemplate.html';
 
         vm.addList = function () {
 
